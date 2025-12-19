@@ -1,0 +1,198 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS Style Link -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Bootstrap 5 CSS API -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body data-page="muse">
+    <!-- Header -->
+    <nav class="p-2 m-0 header navbar navbar-expand-lg d-flex justify-content-between">
+        <a href="#" class="navbar-brand text-light text-uppercase p-3">Desi Di Nardo</a>
+        <div class="d-flex gap-3" style="justify-content: right;">
+            <img id="menu-icon" src="images/icons/menu-icon.png" alt="Menu Icon" class="header-icons">
+            
+        </div>
+    </nav>
+    <!-- Header Sidebar -->
+    <div class="header-sidebar">
+
+        <!-- Close Button (X) -->
+        <button class="btn text-light p-0 m-2 close-button" id="headerCloseButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x"
+                viewBox="0 0 16 16">
+                <path
+                    d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+            </svg>
+        </button>
+
+        <!-- Menu -->
+        <ul class="navbar-nav mr-auto">
+            <a href="index.html" class="nav-item text-decoration-none">
+                <li class="border d-flex justify-content-between p-2">
+                    Home
+                    <img src="images/icons/sidebar-icons/icon-home.png" alt="Home Icon"
+                        class="sidebar-icons invert-icon">
+                </li>
+            </a>
+            <a href="works.html" class="nav-item text-decoration-none">
+                <li class="border d-flex justify-content-between p-2">
+                    Works
+                    <img src="images/icons/sidebar-icons/icon-works.png" alt="Works Icon"
+                        class="sidebar-icons invert-icon">
+                </li>
+            </a>
+            <a href="reviews.html" class="nav-item text-decoration-none">
+                <li class="border d-flex justify-content-between p-2">
+                    Reviews
+                    <img src="images/icons/sidebar-icons/icon-review.png" alt="Reviews Icon" class="sidebar-icons">
+                </li>
+            </a>
+            <a href="publications.html" class="nav-item text-decoration-none">
+                <li class="border d-flex justify-content-between p-2">
+                    Publications
+                    <img src="images/icons/sidebar-icons/icon-publications.png" alt="Publications Icon"
+                        class="sidebar-icons">
+                </li>
+            </a>
+            <a href="muse.html" class="nav-item active text-decoration-none">
+                <li class="border d-flex justify-content-between p-2">
+                    Muse
+                    <img src="images/icons/sidebar-icons/icon-muse.png" alt="Muse Icon" class="sidebar-icons">
+                </li>
+            </a>
+            <a href="contact-me.html" class="nav-item text-decoration-none">
+                <li class="border d-flex justify-content-between p-2">
+                    Contact Me
+                    <img src="images/icons/sidebar-icons/icon-contact.png" alt="Contact Me Icon" class="sidebar-icons">
+                </li>
+            </a>
+        </ul>
+        <p class="disclaimer text-light p-2">
+            @desidinardo.ca. All rights reserved.
+        </p>
+    </div>
+
+    <!-- Main Content -->
+    <main style="min-height: 800px;">
+        <section id="museSection" style="grid-column-start: 1; grid-column-end: 6; min-height: 900px;" class="p-3">
+            <h1 class="send-flowers text-light text-shadow">Muse</h1>
+            <div class="container text-center align-items-center my-auto">
+                <div id="museCarousel" class="carousel slide d-flex align-items-center" style="position: relative;">
+                <a id="museCarouselPrev" class="carousel-control-prev bg-primary" data-bs-target="#museCarousel" data-bs-slide="prev"
+                    style="height: 50px; width: 50px; cursor: pointer;">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                    <div class="carousel-inner p-4 m-3 rounded" style="background-color: rgba(24, 24, 24, 0.623); height: 650px;">
+                    <div class="carousel-item active">
+                        <h4 class="text-light">For study in High School and Post Secondary Curriculums</h4>
+                        <div class="image-display" id="museImageDisplay">
+                            <img class="w-100" src="images/muse/section-1-image-1.png" alt="For Study In High School & Post Secondary Curriculums">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <h4 class="text-light">For study in High School and Post Secondary Curriculums</h4>
+                        <div class="image-display" id="museImageDisplay">
+                            <img class="w-100" src="images/muse/section-1-image-2.png" alt="For Study In High School & Post Secondary Curriculums">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <h4 class="text-light">For study in High School and Post Secondary Curriculums</h4>
+                        <div class="image-display" id="museImageDisplay">
+                            <img class="w-100" src="images/muse/section-1-image-3.png"
+                                alt="For Study In High School & Post Secondary Curriculums">
+                        </div>
+                    </div>
+                    <div class="carousel-item p-3">
+                        <h4 class="text-light">​​These Fragile Snowflakes by Shelly Marwood</h4>
+                        <p class="text-light">Based on Di Nardo's poem, "Poetry on Lake Simcoe." It was commissioned and premiered by <a class="bg-00C4D2" href="https://www.shelleymarwood.com/index.html">Shelly Marwood</a>, Jubilate Singers of Toronto in
+                        May 2014. It won the 2015 U of T Choral Composition Competition and was sung by the MacMillan Singers on December 6,
+                        2015.</p>
+                        <div class="rounded p-3" style="background: rgba(0, 0, 0, 0.288);">
+                            <a href="https://soundcloud.com/shelley-marwood/these-fragile-snowflakes-macmillan-singers" class="btn btn-outline-primary">Listen</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <h4 class="text-light">​​Keep Telling Me</h4>
+                        <p class="text-light">LISTEN Musical score by Andrzej Górecki, Polish-born award-winning composer living in Norway. Voice by award-winning
+                        Irish-Canadian mezzo-soprano and actress <a class="bg-00C4D2" href="http://wallisgiunta.com">Wallis Giunta.</a></p>
+                        <div class="rounded p-3" style="background: rgba(0, 0, 0, 0.35);">
+                            <a href="https://www.desidinardo.ca/uploads/8/6/7/3/86734798/00_-_andrzej_gorecki-wallis_giunta_rainbow_studio_-_mix_keep_telling_me_16022022.01_02.mp3"
+                                class="btn btn-outline-primary">Listen</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <h4 class="text-light">​Poems by Desi Di Nardo translated by Renzo Ricchi</h4>
+                        <h4 class="text-light">Poesie di Desi Di Nardo tradotte da Renzo Ricchi</h4>
+                        <div class="rounded p-3" style="background: rgba(0, 0, 0, 0.35);">
+                            <a href="documents\translation_of_egidio_marcheses_review_angela_dambra_august_2_2010[1].doc"
+                                class="btn btn-outline-primary">English</a>
+                            <a href="documents\desi_-_saggio_di_e.m..docx"
+                                class="btn btn-outline-primary">Italian</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <h4 class="text-light">​Poems by Desi Di Nardo translated by Javad Rhabar</h4>
+                        <p class="text-light"><a href="#">Javad Rhabar</a> is a publisher/news editor living in Iran who has translated into Farsi "Rainbird in the Annex" and "Poetry
+                        on Lake Simcoe".</p>
+                            <h5 class="text-light">Rainbird In The Annex</h5>
+                            <img class="w-50" src="images/muse/section-5-image-1.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <h4 class="text-light">​Poems by Desi Di Nardo translated by Javad Rhabar</h4>
+                        <p class="text-light"><a class="bg-00C4D2" href="#">Javad Rhabar</a> is a publisher/news editor living in Iran who has translated into Farsi "Rainbird in
+                            the Annex" and "Poetry
+                            on Lake Simcoe".</p>
+                            <h5 class="text-light">Poetry on Lake Simcoe</h5>
+                            <img class="w-50" src="images/muse/section-5-image-2.jpg">
+                    </div>
+                    <div class="carousel-item">
+                        <h4 class="text-light">The Cure Is a Forest - Translated by Angela D'Ambra</h4>
+                        <div class="rounded p-3" style="background: rgba(0, 0, 0, 0.35);">
+                            <a href="documents/traduzione_x_polistampa_14_novembre_2010.doc"
+                                class="btn btn-outline-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+                <a id="museCarouselNext" class="carousel-control-next bg-primary" data-bs-target="#museCarousel" data-bs-slide="next"
+                    style="height: 50px; width: 50px; cursor: pointer;">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="d-flex justify-content-between p-2 flex-wrap">
+        <div class="d-flex gap-2">
+            <a href="index.html" class="text-decoration-none">Home</a>
+            <a href="works.html" class="text-decoration-none">Works</a>
+            <a href="reviews.html" class="text-decoration-none">Reviews</a>
+            <a href="publications.html" class="text-decoration-none">Publications</a>
+            <a href="muse.html" class="active text-decoration-none">Muse</a>
+            <a href="contact-me.html" class="text-decoration-none">Contact Me</a>
+        </div>
+        <p class="disclaimer text-light">
+            @desidinardo.ca. All rights reserved.
+        </p>
+    </footer>
+
+    <!-- Link JS Script File -->
+    <script type="module" src="js/script.js"></script>
+
+    <!-- Bootstrap 5 JS API + Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

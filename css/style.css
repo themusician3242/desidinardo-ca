@@ -1,0 +1,536 @@
+/* 
+FONTS USED: 
+
+> Send Flowers
+> Satisfy
+> News Cycle
+> Noto Sans
+
+ */
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Satisfy&family=Send+Flowers&display=swap');
+
+/* HTML & Body */
+.page-wrapper { 
+    position: fixed;
+    top: 0;
+    left: 0;
+
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 1;
+
+    transition: all 1s ease;
+}
+section, .header, footer {
+    position: relative;
+    z-index: 1;
+}
+
+/* Colors */
+.bg-00C4D2 { 
+    color: #00C4D2
+}
+
+/* Sizes */
+.w-50 {
+    max-width: 300px;
+}
+.w-100 {
+    max-width: 700px;
+}
+
+/* Fonts */
+.send-flowers { 
+    font-family: "Send Flowers", sans-serif;
+    font-size: 6em;
+}
+
+/* Header & Sidebar */
+.header {
+    z-index: 2;
+    background-image: linear-gradient(to right, rgba(82,72,156,1),rgba(56,49,106,1));
+}
+.navbar-brand {
+    font-size: 2rem !important;
+    font-weight: 600;
+}
+
+/* Sidebars */
+.header-sidebar {
+    /* Style: */
+    background-color: rgba(62,54,117,1);
+    font-family: Noto Sans, sans-serif;
+    font-weight: 600;
+    z-index: 5;
+
+    /* Size */
+    height: 100%;
+
+    /* Position */
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    /* Current State */
+    width: 0;
+
+    /* Animation: */
+    transition: width 0.3s ease-out;
+}
+.header-sidebar * { 
+    display: none;
+}
+.header-sidebar.is-open * {
+    display: block;
+}
+
+/* Sidebar for Desi's Works: */
+#worksSidebar { 
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    height: 100%;
+    background-color: #313664;
+
+    /* Current State */
+    width: 15px;
+
+    transition: all 0.3s ease;
+}
+#worksSidebar button { 
+    transition: all 0.3s ease;
+
+    position: relative; 
+    top: 12vh;
+}
+#worksSidebar h4 { 
+    color: white;
+}
+#worksSidebar.is-open {
+    width: 150px !important;
+}
+#worksSidebar div * { 
+    display: none;
+    width: 100px;
+}
+#worksSidebar.is-open div * {
+    display: flex;
+}
+#worksSidebar input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 20px;
+    height: 20px;
+
+    border: 2px solid #313664;
+    border-radius: 50%;
+
+    cursor: pointer;
+    position: relative;
+}
+
+#worksSidebar input[type="radio"]:checked::after {
+    content: "";
+
+    width: 12px;
+    height: 12px;
+
+    background: white;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+label {
+    font-weight: 500;
+    color: rgb(153, 153, 236);
+}
+
+/* Icons & Logos */
+.header-icons {
+    width: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.header-icons:hover {
+    transform: scale(1.1);
+}
+.sidebar-icons {
+    height: 25px;
+    cursor: pointer;
+}
+.invert-icon { 
+    filter: invert(1) brightness(3);
+}
+.logos {
+    float: left;
+}
+.socials { 
+    transition: transform 0.3s ease;
+}
+.socials:hover {
+    transform-origin: center;
+    transform: rotate(360deg) scale(1.1);
+}
+
+/* Sidebar */
+.header-sidebar li {
+    transition: background-color linear;
+}
+.header-sidebar li:hover {
+    background-color: #52489C;
+}
+.header-sidebar .active {
+    background-color: #52489C;
+}
+.header-sidebar a{
+    color: white !important;
+}
+
+/* Decorations */
+.decoration { 
+    position: absolute;
+}
+
+/* Animations */
+.is-open {
+    width: 350px;
+}
+
+.transform-shadow-light {
+    text-shadow: 0px 1px 1px white !important;
+}
+.transform-text-light { 
+    color: white !important;
+}
+.transform-bg-dark { 
+    background-color: rgba(0, 0, 0, 0.466);
+}
+.poem-line {
+    opacity: 0;
+}
+
+.fade-in-animation {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.fade-out-animation {
+    animation: fadeOut 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes rotate90Deg { 
+    from { 
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(90deg)
+    }
+}
+
+/* Lines */
+.vertical-line {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 200px;
+
+    background-color: #B5F2FF;
+}
+
+/* Main Content > Grid Layout */
+main { 
+    width: 100%;
+    margin: auto;
+
+    display: grid; 
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: stretch;
+
+    background-color: white;
+}
+
+#introImageSection {
+    background-image: url("../images/bio/image-2.jpg");
+    background-size: cover;
+    background-position: top;
+    min-height: 800px;
+}
+
+#homeMain section:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    background-size: cover;
+    background-position: top;
+
+    min-height: 800px;
+}
+
+#homeMain section:nth-child(2) {
+    grid-column-start: 3;
+    grid-column-end: 6;
+}
+
+#homeMain section:nth-child(3) img {
+    width: 100%;
+    object-fit: cover;
+}
+#homeMain section:nth-child(3) {
+    grid-column-start: 3;
+    grid-column-end: 6;
+}
+
+
+@media screen and (max-width: 1200px) {
+    main { 
+        width: 100%;
+    }
+    #homeMain section:nth-child(3) {
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    main {
+        width: 100%;
+    }
+
+    #homeMain section:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+
+    #homeMain section:nth-child(2) {
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+
+    #homeMain section:nth-child(3) {
+        grid-column-start: 1;
+        grid-column-end: 6;
+    }
+    .review-card:first-child { 
+        flex-direction: column !important;
+    }
+}
+@media screen and (max-width: 400px) {
+    .review-card-image { 
+        width: 100% !important;
+        min-width: 150px;
+    }
+}
+
+/* Intro */
+#introQuote { 
+    position: relative;
+    padding: 20px;
+    background-color: #EFFFC2;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+#sunFlower1 { 
+    top: -15px;
+    left: -15px;
+    width: 50px;
+}
+
+#sunFlower2 {
+    bottom: -15px;
+    right: -15px;
+    width: 50px;
+    transform: rotate(180deg);
+}
+
+#introHeader h1 { 
+    font-size: 3em;
+}
+
+/* Anchors (a) */
+.default-anchor {
+    color: black;
+}
+
+/* Cards */
+.default-card {
+    max-width: 20rem;
+}
+.default-card-lg {
+    max-width: 30rem;
+}
+.card {
+    transition: transform 0.2s ease;
+}
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.card-img-top {
+    height: 200px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+.review-card { 
+    width: 100%;
+}
+.review-card-image {
+    min-width: 200px;
+}
+/* Works - Poetry */
+.poem-line {
+    opacity: 0;
+}
+
+/* Heroes & Displays */
+
+/* Publications Sections */
+.publications-dropdown { 
+    width: 100%;
+    border: solid 1px black !important;
+}
+.dropdown-icons { 
+    transform-origin: center;
+    transition: all 0.3s ease;
+}
+
+.dropdown-icons.is-open-2 {
+    transform: rotate(90deg);
+}
+
+.dropdown-content { 
+    display: none;
+}
+
+/* Muse Section */
+#museSection { 
+    background: url("../images/backgrounds/muse/background-1.gif");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+
+    text-align: center;
+}
+#museSection::before { 
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 44, 44, 0.205);
+    top:0;
+    right: 0;
+}
+#museSection * {
+    position: relative;
+    z-index: 4;
+}
+#museSection h1 { 
+    text-shadow: 0 0 4px black;
+}
+
+/* Footer */
+footer {
+    background-color: #3B30B4;
+    grid-column-start: 1;
+    grid-column-end: 6;
+}
+footer a {
+    color: white !important;
+    font-weight: 500;
+}
+footer .active {
+    color: #ABA9DF !important;
+}
+
+/* Misc. */
+
+/* Unincluded Stuff: 
+
+.intro-wrapper {
+    position: relative;
+    transition: transform 0.6s ease-out;
+    z-index: 2;
+}
+
+#introHeader,
+#introHeader hr,
+#introHeader div a {
+    transition: all 0.6s ease-out;
+}
+
+#introductionHero {
+    Background Image
+    background-image: url("../images/backgrounds/hero-intro/image-1.jpeg");
+    background-size: cover;
+    background-position: center;
+
+    Size and Position
+    position: relative;
+    width: 100%;
+    height: 450px;
+    padding: 4rem;
+
+    Animation
+    transition: all 0.6s ease-out;
+}
+
+#introBackgroundHelperOverlay_1,
+#introBackgroundHelperOverlay_2 {
+    opacity: 1;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-position: center;
+
+    transition: all 0.5s ease;
+}
+
+Hover Effect
+
+.intro-wrapper:has(#introductionHero:hover) {
+    transform: translateY(-75px);
+}
+
+#introductionHero:hover {
+    height: 600px;
+    z-index: 1;
+}
+*/
+
