@@ -1,4 +1,4 @@
-import {works1Content1, works1Content2, works3Content1, works3Content2, works6Content1, works6Content2,
+import {works1Content1, works1Content2, works3Content1, works3Content2, museCarousel, museSectionCollage,
     poem_titles, poem_1, poem_2, poem_3, poem_4, poem_5, poem_6, poem_7, poem_8, poem_9, poem_10, poem_11, poem_12
 } from "./library.js";
 
@@ -9,6 +9,8 @@ window.addEventListener("DOMContentLoaded", () => {
     effective code. 
 
     */
+
+    // Global Variables 
     const page = document.body.dataset.page;
     console.log(`${page}`);
 
@@ -41,35 +43,6 @@ window.addEventListener("DOMContentLoaded", () => {
     header_closeButton.addEventListener("click", () => {
         headerSidebar.classList.remove("is-open");
     });
-
-// Index.HTML JavaScript Functions:
-
-function runIndexPage() {
-
-    // Switch Image Backgrounds
-    const imageCarouselPrevBtn = document.getElementById("imageCarouselPreviousButton");
-    const imageCarouselNextBtn = document.getElementById("imageCarouselNextButton");
-    const introImageSection = document.getElementById("introImageSection");
-    let introIndex = 0;
-
-    const imageBackgrounds_1 = [
-        "images/bio/image-1.jpeg",
-        "images/bio/image-2.jpg",
-        "images/bio/image-3.jpg"
-    ]
-
-    imageCarouselPrevBtn.addEventListener("click", () => { 
-        introIndex = (introIndex + 1) % imageBackgrounds_1.length;
-
-        introImageSection.style.backgroundImage = `url("${imageBackgrounds_1[introIndex]}")`;
-    });
-
-    imageCarouselNextBtn.addEventListener("click", () => {
-        introIndex = (introIndex - 1 + imageBackgrounds_1.length) % imageBackgrounds_1.length;
-
-        introImageSection.style.backgroundImage = `url("${imageBackgrounds_1[introIndex]}")`;
-    });
-}
 
 // WORKS.HTML JavaScript Functions
 
@@ -109,19 +82,24 @@ function runWorksPage() {
         switch (selected) {
             case 'all':
                 allWorks.forEach(el => el.style.display = '');
+                break;
+
             case 'collabs':
-                document.querySelectorAll('.works-collab')
-                    .forEach(el => el.style.display = '');
+                document.querySelectorAll('.works-collab').forEach(el => {
+                    el.style.display = '';
+                });
                 break;
 
             case 'poetry':
-                document.querySelectorAll('.works-poetry')
-                    .forEach(el => el.style.display = '');
+                document.querySelectorAll('.works-poetry').forEach(el => { 
+                    el.style.display = '';
+                });
                 break;
 
             case 'books':
-                document.querySelectorAll('.works-books')
-                    .forEach(el => el.style.display = '');
+                document.querySelectorAll('.works-books').forEach(el => {
+                    el.style.display = '';
+                });
                 break;
         }
     }
@@ -139,14 +117,13 @@ function runWorksPage() {
     const works1btn2 = document.getElementById('works1btn2');
 
     works1btn1.addEventListener("click", () => {
-        console.log('works1btn1 clicked');
         works1Content.innerHTML = works1Content2;
     });
 
     works1btn2.addEventListener("click", () => {
-        console.log('works1btn2 clicked');
         works1Content.innerHTML = works1Content1;
     });
+    works1Content.innerHTML = works1Content2;
 
     // Di Nardo As An Educator 
     const works3Content = document.getElementById("works3Content");
@@ -161,17 +138,16 @@ function runWorksPage() {
         works3Content.innerHTML = works3Content2;
     });
 
-    // 2022 Emerging Young Artist: 
-    const works6Content = document.getElementById("works6Content");
-    const works6btn1 = document.getElementById("works6btn1");
-    const works6btn2 = document.getElementById("works6btn2");
+    if (window.location.hash === "#works-poetry-parade") {
+        const carousel = document.querySelector("#works3Carousel");
+        const bsCarousel = bootstrap.Carousel.getOrCreateInstance(carousel);
 
-    works6btn1.addEventListener("click", () => {
-        works6Content.innerHTML = works6Content1;
-    });
-    works6btn2.addEventListener("click", () => {
-        works6Content.innerHTML = works6Content2;
-    });
+        const items = carousel.querySelectorAll(".carousel-item");
+        items.forEach(item => item.classList.remove("active"));
+
+        document.getElementById("works3PoetryParade").classList.add("active");
+         bsCarousel.to(items.length - 3); // optional if it's last
+    }
 
     // Rendering Poem Lines: 
     const poemContainer = document.getElementById("works7Content");
@@ -251,6 +227,39 @@ function runWorksPage() {
     renderPoemLines(poemLibrary[0], poemContainer);
 }
 
+    // Index.HTML JavaScript Functions:
+
+function runIndexPage() {
+
+    // Switch Image Backgrounds
+    const imageCarouselPrevBtn = document.getElementById("imageCarouselPreviousButton");
+    const imageCarouselNextBtn = document.getElementById("imageCarouselNextButton");
+    const introImageSection = document.getElementById("introImageSection");
+    let introIndex = 0;
+
+    const imageBackgrounds_1 = [
+        "images/bio/image-1.jpeg",
+        "images/bio/image-2.jpg",
+        "images/bio/image-3.jpg"
+    ];
+
+    imageCarouselPrevBtn.addEventListener("click", () => {
+        introIndex = (introIndex + 1) % imageBackgrounds_1.length;
+
+        introImageSection.style.backgroundImage = `url("${imageBackgrounds_1[introIndex]}")`;
+    });
+
+    imageCarouselNextBtn.addEventListener("click", () => {
+        introIndex = (introIndex - 1 + imageBackgrounds_1.length) % imageBackgrounds_1.length;
+
+        introImageSection.style.backgroundImage = `url("${imageBackgrounds_1[introIndex]}")`;
+    });
+
+    poetryParadeLink.addEventListener("click", () => {
+        changeToPoetryParade();
+    });
+}
+
 function runPublicationsPage() {
     const dropdownContents = document.querySelectorAll('.dropdown-content');
     const dropdownIcons = document.querySelectorAll('.dropdown-icons');
@@ -273,31 +282,59 @@ function runPublicationsPage() {
 
 function runMusePage() {
     const museSection = document.getElementById('museSection');
-    const museSection_imageLibrary = [
-        "images/backgrounds/muse/background-1.gif",
-        "images/backgrounds/muse/background-1.gif",
-        "images/backgrounds/muse/background-1.gif",
-        "images/backgrounds/muse/image-2.avif",
-        "images/backgrounds/muse/image-3.avif",
-        "images/backgrounds/muse/image-4.jpg",
-        "images/backgrounds/muse/image-5.jpg",
-        "images/backgrounds/muse/image-6.jpeg",
-        "images/backgrounds/muse/image-7.jpeg"
-    ];
+    const museContent = document.getElementById('museContent');
+    const museBtn1 = document.getElementById('museBtn1');
+    const museBtn2 = document.getElementById('museBtn2');
 
-    const museCarouselPrev = document.getElementById('museCarouselPrev');
-    const museCarouselNext = document.getElementById('museCarouselNext');
-    let museSectionIndex = 0;
-
-    museCarouselNext.addEventListener("click", () => {
-        museSectionIndex = (museSectionIndex + 1) % museSection_imageLibrary.length;
-        museSection.style.backgroundImage = `url("${museSection_imageLibrary[museSectionIndex]}")`;
+    museContent.innerHTML = museSectionCollage;
+    
+    museBtn1.addEventListener("click", () => {
+        museContent.innerHTML = museSectionCollage;
     });
 
-    museCarouselPrev.addEventListener("click", () => {
-        museSectionIndex = (museSectionIndex - 1 + museSection_imageLibrary.length) % museSection_imageLibrary.length;
-        museSection.style.backgroundImage = `url("${museSection_imageLibrary[museSectionIndex]}")`;
+    museBtn2.addEventListener("click", () => {
+        museContent.innerHTML = museCarousel;
+
+        setupMuseCarouselBackground();
     });
+
+    function setupMuseCarouselBackground() {
+        const museCarouselPrev = document.getElementById('museCarouselPrev');
+        const museCarouselNext = document.getElementById('museCarouselNext');
+
+        if (!museCarouselPrev || !museCarouselNext) return;
+
+        let museSectionIndex = 0;
+
+        const museSection_imageLibrary = [
+            "images/backgrounds/muse/background-1.gif",
+            "images/backgrounds/muse/image-2.avif",
+            "images/backgrounds/muse/image-3.avif",
+            "images/backgrounds/muse/image-4.jpeg",
+            "images/backgrounds/muse/image-5.avif",
+            "images/backgrounds/muse/image-6.jpeg",
+            "images/backgrounds/muse/image-6.jpeg",
+            "images/backgrounds/muse/image-7.jpeg",
+            "images/backgrounds/muse/image-8.png"
+        ];
+
+        museCarouselNext.addEventListener("click", () => {
+            museSectionIndex =
+                (museSectionIndex + 1) % museSection_imageLibrary.length;
+
+            museSection.style.backgroundImage =
+                `url("${museSection_imageLibrary[museSectionIndex]}")`;
+        });
+
+        museCarouselPrev.addEventListener("click", () => {
+            museSectionIndex =
+                (museSectionIndex - 1 + museSection_imageLibrary.length) %
+                museSection_imageLibrary.length;
+
+            museSection.style.backgroundImage =
+                `url("${museSection_imageLibrary[museSectionIndex]}")`;
+        });
+    }
 }
 });
 

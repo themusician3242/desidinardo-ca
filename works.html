@@ -112,7 +112,7 @@
     </div>
 
     <!-- Main Content -->
-    <main class="">
+    <main>
         <section class='works-collab border p-3' style="grid-column-start: 1; grid-column-end: 6;">
             <div class="d-flex gap-3 justify-content-center">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa9YtlyXY3vCI03g6IyG7cPpLP14ZoYECRA-79ta5Mm8qrWYBnyT2NkE3JWk4AVXCCHMY&usqp=CAU" alt="Desjardins"
@@ -120,27 +120,7 @@
                 <h2 class="p-2 text-uppercase">Desjardins</h2>
             </div>
             <div id="works1Content" class="container p-3 text-center">
-                <div id="works1Carousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="images/poems/desjardins/beekeeper.jpg" alt="Beekeeper Poem" class="w-50">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/poems/desjardins/breathe.jpg" alt="Breathe" class="w-50">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/poems/desjardins/tucked-away.jpg" alt="Tucked Away" class="w-50">
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev bg-primary" data-bs-target="#works1Carousel" data-bs-slide="prev"
-                        style="height: 50px; width: 50px; margin: auto; cursor: pointer;">
-                        <span class="carousel-control-prev-icon"></span>
-                    </a>
-                    <a class="carousel-control-next bg-primary" data-bs-target="#works1Carousel" data-bs-slide="next"
-                        style="height: 50px; width: 50px; margin: auto; cursor: pointer;">
-                        <span class="carousel-control-next-icon"></span>
-                    </a>
-                </div>
+
             </div>
             <div class="d-flex justify-content-center gap-3">
                 <button id="works1btn1" class="btn btn-outline-primary">
@@ -183,7 +163,7 @@
         </section>
 
         <!-- Professor Di Nardo as an Educator -->
-        <section class='works-collab border p-3' style="grid-column-start: 1; grid-column-end: 6;">
+        <section id="works-poetry-parade" class='works-collab border p-3' style="grid-column-start: 1; grid-column-end: 6;">
             <div class="d-flex gap-3 justify-content-center">
                 <img src="https://images.vexels.com/media/users/3/143402/isolated/preview/afbbf15d5e82a1c4fb5a55c4eacf3003-graduation-cap-icon.png"
                     height="50px;" class="logos">
@@ -207,7 +187,7 @@
                         <div class="carousel-item">
                              <img src="images/poems/educator/image-7.png" alt="Image 7" class="w-100">                       
                         </div>
-                        <div class="carousel-item">
+                        <div class="carousel-item" id="works3PoetryParade">
                             <img src="images/poems/educator/image-8.jpg" alt="Image 8" class="w-100">                        
                         </div>
                         <div class="carousel-item">
@@ -248,12 +228,12 @@
                 <div id="works4Carousel" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <video width="100%" height="300" style="max-width:600px;" controls preload="none">
+                            <video width="100%" height="300" style="max-width:600px;" controls preload="none" poster="videos/video-frames/pen-canada-1.png">
                                 <source src="videos/pen-canada-video.mp4" type="video/mp4">
                             </video>                        
                         </div>
                         <div class="carousel-item">
-                            <video width="100%" height="600" style="max-width:600px;" controls preload="none">
+                            <video width="100%" height="600" style="max-width:600px;" controls preload="none" poster="videos/video-frames/pen-canada-2.png">
                                 <source src="videos/pen-canada-video-2.mp4" type="video/mp4">
                             </video>
                         </div>
@@ -291,17 +271,9 @@
             </div> 
             <h5 class="text-center">Speaker at Michael Power - St. Joseph High School: Poetry/Arts Celebration​</h5>
             <div id="works6Content" class="container p-3 text-center">
-                <video width="100%" height="600" style="max-width:600px;" controls preload="none">
+                <video width="100%" height="600" style="max-width:600px;" controls preload="none" poster="videos/video-frames/mpsj.png">
                     <source src="videos/mpsj-video.mp4" type="video/mp4">
                 </video>
-            </div>
-            <div class="d-flex justify-content-center gap-3 mb-3">
-                <button id="works6btn1" class="btn btn-outline-primary">
-                    Videos
-                </button>
-                <button id="works6btn2" class="btn btn-outline-primary">
-                    More
-                </button>
             </div>
         </section>
 
@@ -319,7 +291,8 @@
                 > The Infinite
                 > Rainbird In The Annex
             -->
-        <section class='works-poetry border p-3' style="grid-column-start: 1; grid-column-end: 6;">
+        <section class='d-flex align-items-center flex-column works-poetry border p-3' style="grid-column-start: 1; grid-column-end: 6; min-height: 800px;">
+            <div class="m-auto">
             <div class="d-flex gap-3 align-items-center justify-content-center">
                 <img src="https://narahita.com/wp-content/uploads/2023/01/Golden-Book-Logo-scaled.jpg"
                     height="70px;" class="logos">
@@ -331,7 +304,20 @@
             <div class="d-flex justify-content-center gap-3 mb-2">
                 <button id='works7btn1' class="btn btn-outline-primary">Previous</button>
                 <button id='works7btn2' class="btn btn-outline-primary">Next</button>
-
+            </div>
+            <div class="text-center mt-5">
+                <!-- Accessible audio player -->
+                <figure class="w-100 text-center mt-4">
+                    <figcaption id="audio-description" class="mb-2 fw-bold">
+                        Listen to more of Desi's Poems Here: 
+                    </figcaption>
+                
+                    <audio controls preload="metadata" aria-describedby="audio-description" class="w-100">
+                        <source src="videos\poetry-desi-dinardo-ytshorts.savetube.me.mp4" type="audio/mp4">
+                        Your browser does not support the audio element.
+                    </audio>
+                </figure>
+            </div>
             </div>
         </section>
 
@@ -376,23 +362,21 @@
                         <a href="https://www.amazon.ca/Cure-Forest-Desi-Nardo/dp/1550713353?sr=8-2" class="btn btn-outline-primary">Purchase</a>
                     </div>
                 </div>
-
             </div>
         </section>
     </main>
 
-
     <!-- Footer -->
-    <footer class="d-flex justify-content-center p-2">
-        <div class="d-flex gap-2 justify-content-center">
-            <a href="index.html" class="text-decoration-none">Home</a>
-            <a href="works.html" class="active text-decoration-none">Works</a>
-            <a href="reviews.html" class="text-decoration-none">Reviews</a>
-            <a href="publications.html" class="text-decoration-none">Publications</a>
-            <a href="muse.html" class="text-decoration-none">Muse</a>
-            <a href="contact-me.html" class="text-decoration-none">Contact Me</a>
+    <footer class="p-2 text-center">
+        <div class="gap-3 mx-2">
+            <a href="index.html" class="active text-decoration-none mx-2">Home</a>
+            <a href="works.html" class="text-decoration-none mx-2">Works</a>
+            <a href="reviews.html" class="text-decoration-none mx-2">Reviews</a>
+            <a href="publications.html" class="text-decoration-none mx-2">Publications</a>
+            <a href="muse.html" class="text-decoration-none mx-2">Muse</a>
+            <a href="contact-me.html" class="text-decoration-none mx-2">Contact Me</a>
         </div>
-        <p class="disclaimer text-light">
+        <p class="disclaimer text-light mx-auto mt-2">
             @desidinardo.ca. All rights reserved.
         </p>
     </footer>
