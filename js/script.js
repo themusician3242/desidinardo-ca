@@ -235,21 +235,23 @@ function runIndexPage() {
     const imageCarouselPrevBtn = document.getElementById("imageCarouselPreviousButton");
     const imageCarouselNextBtn = document.getElementById("imageCarouselNextButton");
     const introImageSection = document.getElementById("introImageSection");
-    let introIndex = 0;
 
     const imageBackgrounds_1 = [
         "images/bio/image-1.jpeg",
         "images/bio/image-2.jpg",
-        "images/bio/image-3.jpg"
+        "images/bio/image-3.jpg",
+        "images/bio/image-4.jpeg"
     ];
 
-    imageCarouselPrevBtn.addEventListener("click", () => {
+    let introIndex = 0;
+
+    imageCarouselNextBtn.addEventListener("click", () => {
         introIndex = (introIndex + 1) % imageBackgrounds_1.length;
 
         introImageSection.style.backgroundImage = `url("${imageBackgrounds_1[introIndex]}")`;
     });
 
-    imageCarouselNextBtn.addEventListener("click", () => {
+    imageCarouselPrevBtn.addEventListener("click", () => {
         introIndex = (introIndex - 1 + imageBackgrounds_1.length) % imageBackgrounds_1.length;
 
         introImageSection.style.backgroundImage = `url("${imageBackgrounds_1[introIndex]}")`;
