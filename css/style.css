@@ -417,6 +417,11 @@ main {
 
 /* Heroes & Displays */
 
+/* Section Items */
+.section-title { 
+    border-bottom: solid rgb(54, 134, 255);
+}
+
 /* Publications Sections */
 .publications-dropdown { 
     width: 100%;
@@ -473,6 +478,22 @@ main {
         transform: scale(1.5);
         z-index: 5;
     }
+}
+
+#museCarouselPrev,
+#museCarouselNext {
+    transition: all 0.2s ease;
+
+}
+#museCarouselPrev:hover, #museCarouselNext:hover { 
+    background-color: rgb(40, 72, 255) !important;
+    transform: scale(1.1);
+}
+
+/* Contacts Section */
+.contacts-section { 
+    border: solid 2px rgb(0, 140, 255);
+    border-radius: 25px;
 }
 
 /* Footer */

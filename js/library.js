@@ -250,7 +250,7 @@ export const museSectionCollage = `
 // Muse 
 export const museCarousel = `
             <div id="museCarousel" class="carousel slide d-flex align-items-center gap-2" style="position: relative;">
-                    <div class="carousel-inner p-4 m-3 rounded" style="background-color: rgba(24, 24, 24, 0.623); height: 650px;">
+                    <div class="carousel-inner p-4 m-3 rounded d-flex justify-content-between" style="background-color: rgba(24, 24, 24, 0.623); height: 650px;">
                     <div class="carousel-item active">
                         <h4 class="text-light">For study in High School and Post Secondary Curriculums</h4>
                         <div class="container text-center">
@@ -262,10 +262,12 @@ export const museCarousel = `
                         </div>
                     </div>
                     <div class="carousel-item p-3">
-                        <h4 class="text-light">​​These Fragile Snowflakes by Shelly Marwood</h4>
-                        <p class="text-light">Based on Di Nardo's poem, "Poetry on Lake Simcoe." It was commissioned and premiered by <a class="bg-00C4D2" href="https://www.shelleymarwood.com/index.html">Shelly Marwood</a>, Jubilate Singers of Toronto in
-                        May 2014. It won the 2015 U of T Choral Composition Competition and was sung by the MacMillan Singers on December 6,
-                        2015.</p>
+                        <div>
+                            <h4 class="text-light">​​These Fragile Snowflakes by Shelly Marwood</h4>
+                            <p class="text-light">Based on Di Nardo's poem, "Poetry on Lake Simcoe." It was commissioned and premiered by <a class="bg-00C4D2" href="https://www.shelleymarwood.com/index.html">Shelly Marwood</a>, Jubilate Singers of Toronto in
+                            May 2014. It won the 2015 U of T Choral Composition Competition and was sung by the MacMillan Singers on December 6,
+                            2015.</p>
+                        </div>
                         <div class="rounded p-3" style="background: rgba(0, 0, 0, 0.288);">
                             <a href="https://soundcloud.com/shelley-marwood/these-fragile-snowflakes-macmillan-singers" class="btn btn-outline-primary">Listen</a>
                         </div>
