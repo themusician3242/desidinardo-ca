@@ -89,9 +89,17 @@
             <div class="container text-center align-items-center my-auto" id="museContent">
 
             </div>
-            <div class="d-flex justify-content-center mt-3 gap-3 p-2" style="background-color: rgba(0, 0, 0, 0.616); border-radius: 15px;">
-                <button class="btn btn-outline-primary" id="museBtn1">Pictures</button>
-                <button class="btn btn-outline-primary" id="museBtn2">Works</button>
+            <div class="d-flex justify-content-center mt-3 gap-3 p-2" style="background-color: rgba(150, 178, 255, 0.616); border-radius: 15px;">
+                <a id="museCarouselPrev" class="carousel-control-prev bg-primary" data-bs-target="#museCarousel" data-bs-slide="prev"
+                    style="height: 50px; width: 50px; cursor: pointer; opacity: 1; border-radius: 15px;">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <button class="btn btn-primary" id="museBtn1">Pictures</button>
+                <button class="btn btn-primary" id="museBtn2">Works</button>
+                <a id="museCarouselNext" class="carousel-control-next bg-primary" data-bs-target="#museCarousel" data-bs-slide="next"
+                    style="height: 50px; width: 50px; cursor: pointer; opacity: 1; border-radius: 15px;">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
             </div>
         </section>
     </main>

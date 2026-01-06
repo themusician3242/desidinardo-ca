@@ -92,7 +92,7 @@ function runWorksPage() {
 
             case 'poetry':
                 document.querySelectorAll('.works-poetry').forEach(el => { 
-                    el.style.display = '';
+                    el.style.display = 'flex';
                 });
                 break;
 

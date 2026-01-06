@@ -30,7 +30,7 @@ section, .header, footer {
 
 /* Colors */
 .bg-00C4D2 { 
-    color: #00C4D2
+    color: rgb(153, 206, 255) !important;
 }
 
 /* Sizes */
@@ -183,10 +183,10 @@ label {
     transition: background-color linear;
 }
 .header-sidebar li:hover {
-    background-color: #1500b3;
+    background-color: rgb(121, 190, 255) !important;
 }
 .header-sidebar .active {
-    background-color: #1300a1;
+    background-color: rgb(0, 132, 255) !important;;
 }
 .header-sidebar a{
     color: white !important;
@@ -485,8 +485,11 @@ footer a {
     color: white !important;
     font-weight: 500;
 }
+footer a:hover {
+    color: rgb(121, 190, 255) !important;
+}
 footer .active {
-    color: rgb(17, 0, 255) !important;
+    color: rgb(153, 206, 255) !important;
 }
 
 /* Misc. */

@@ -94,11 +94,7 @@ export const works3Content2 = `
 `;
 
 export const museSectionCollage = `
-                <div id="works6Carousel" class="carousel slide d-flex gap-3" data-bs-ride="carousel">
-                    <a class="carousel-control-prev bg-primary" data-bs-target="#works6Carousel" data-bs-slide="prev"
-                        style="height: 50px; width: 50px; margin: auto; cursor: pointer;">
-                        <span class="carousel-control-prev-icon"></span>
-                    </a>
+                <div id="museCarousel" class="carousel slide d-flex gap-3" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="images/poems/young-artist/image-1.jpg" alt="Image 1" class="w-100" style="max-width: 800px;">
@@ -248,20 +244,12 @@ export const museSectionCollage = `
                              <img src="images/poems/young-artist/image-49.jpeg" alt="Image 44" class="w-100" style="max-width:400px;">
                         </div>
                     </div>
-                    <a class="carousel-control-next bg-primary" data-bs-target="#works6Carousel" data-bs-slide="next"
-                        style="height: 50px; width: 50px; margin: auto; cursor: pointer;">
-                        <span class="carousel-control-next-icon"></span>
-                    </a>
                 </div>
 `;
 
 // Muse 
 export const museCarousel = `
             <div id="museCarousel" class="carousel slide d-flex align-items-center gap-2" style="position: relative;">
-                <a id="museCarouselPrev" class="carousel-control-prev bg-primary" data-bs-target="#museCarousel" data-bs-slide="prev"
-                    style="height: 50px; width: 50px; cursor: pointer;">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
                     <div class="carousel-inner p-4 m-3 rounded" style="background-color: rgba(24, 24, 24, 0.623); height: 650px;">
                     <div class="carousel-item active">
                         <h4 class="text-light">For study in High School and Post Secondary Curriculums</h4>
@@ -322,7 +310,7 @@ export const museCarousel = `
                             the Annex" and "Poetry
                             on Lake Simcoe".</p>
                             <h5 class="text-light">Poetry on Lake Simcoe</h5>
-                            <img class="w-100" style="max-width: 400px" src="images/muse/section-5-image-2.jpg">
+                            <img class="w-100" style="max-width: 300px;" src="images/muse/section-5-image-2.jpg">
                     </div>
                     <div class="carousel-item">
                         <h4 class="text-light">The Cure Is a Forest - Translated by Angela D'Ambra</h4>
@@ -334,14 +322,10 @@ export const museCarousel = `
                     <div class="carousel-item">
                         <h4 class="text-light">L'Infinito</h4>
                         <p class="text-light"> English Translation by Desi Di Nardo, published in La Rivista di Studi Italiani. Written by Poet <a href="https://en.wikipedia.org/wiki/Giacomo_Leopardi" class="bg-00C4D2"> Giacomo Leopardi. </a> </p>
-                        <img class="w-100" style="max-width: 400px" src="images/muse/section-8-image-1.png">
+                        <img class="w-100" style="max-width: 300px;" src="images/muse/section-8-image-1.png">
                     </div>
                 </div>
-                <a id="museCarouselNext" class="carousel-control-next bg-primary" data-bs-target="#museCarousel" data-bs-slide="next"
-                    style="height: 50px; width: 50px; cursor: pointer;">
-                    <span class="carousel-control-next-icon"></span>
-                </a>
-                </div>
+            </div>
 `   
 
 // Poetry
