@@ -5,9 +5,18 @@ FONTS USED:
 > Satisfy
 > News Cycle
 > Noto Sans
+> Adobe Bengali
 
  */
 @import url('https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Satisfy&family=Send+Flowers&display=swap');
+@font-face { 
+    font-family: "Adobe Bengali";
+    src: "../fonts/fonnts.com-Adobe_Bengali.otf" format('opentype');
+}
+
+.adobe-bengali { 
+    font-family: "Adobe Bengali", serif;
+}
 
 /* HTML & Body */
 html, body { 
@@ -30,7 +39,7 @@ section, .header, footer {
 
 /* Colors */
 .bg-00C4D2 { 
-    color: rgb(153, 206, 255) !important;
+    color: rgb(0, 132, 255) !important;
 }
 
 /* Sizes */
@@ -45,6 +54,19 @@ section, .header, footer {
 .send-flowers { 
     font-family: "Send Flowers", sans-serif;
     font-size: 6em;
+}
+
+/* Button & Anchor Styles */
+.btn-style-1 { 
+    border-radius: 25px !important;
+    background-image: linear-gradient(to right, rgb(100, 172, 255), rgb(65, 153, 255));
+    padding: 5px 15px !important;
+
+    color: white !important;
+    font-size: 1.05em !important;
+}
+.btn-style-1:hover { 
+    background-image: linear-gradient(to right, rgb(0, 119, 255), rgb(0, 106, 226));
 }
 
 /* Header & Sidebar */
@@ -265,6 +287,8 @@ label {
     width: 5px;
     height: 200px;
 
+    transform: translateY(-20px) translateX(-15px);
+
     background-color: #B5F2FF;
 }
 
@@ -275,17 +299,10 @@ main {
 
     display: grid; 
     grid-template-rows: auto auto;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr;
     align-items: stretch;
 
     background-color: white;
-}
-
-#introImageSection {
-    background-image: url("../images/bio/image-2.jpg");
-    background-size: cover;
-    background-position: top;
-    min-height: 800px;
 }
 
 #homeMain section:nth-child(1) {
@@ -296,14 +313,24 @@ main {
     grid-row-end: 3;
 
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: top;
 
-    min-height: 800px;
+    background-image: url("../images/bio/image-2.jpg");
+    min-height: 650px;
 }
 
 #homeMain section:nth-child(2) {
     grid-column-start: 3;
-    grid-column-end: 6;
+    grid-column-end: 7;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-evenly;
+
+    min-height: 800px;
 }
 
 #homeMain section:nth-child(3) img {
@@ -311,39 +338,49 @@ main {
     object-fit: cover;
 }
 #homeMain section:nth-child(3) {
-    grid-column-start: 3;
-    grid-column-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 7;
+}
+#introHeader .default-anchor {
+    transition: all 0.2s ease;
+}
+#introHeader .default-anchor:hover { 
+    color: rgb(141, 219, 255);
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.274);
+    transform: scale(1.3);
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
     main { 
         width: 100%;
     }
     #homeMain section:nth-child(3) {
         grid-column-start: 1;
-        grid-column-end: 6;
+        grid-column-end: 7;
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
     main {
         width: 100%;
     }
 
     #homeMain section:nth-child(1) {
         grid-column-start: 1;
-        grid-column-end: 6;
+        grid-column-end: 7;
     }
 
     #homeMain section:nth-child(2) {
         grid-column-start: 1;
-        grid-column-end: 6;
+        grid-column-end: 7;
     }
 
     #homeMain section:nth-child(3) {
         grid-column-start: 1;
-        grid-column-end: 6;
+        grid-column-end: 7;
     }
     .review-card:first-child { 
         flex-direction: column !important;
@@ -354,12 +391,15 @@ main {
         width: 100% !important;
         min-width: 150px;
     }
+    .vertical-line { 
+        transform: translateY(5px) translateX(20px);
+    }
 }
 
 /* Intro */
 #introQuote { 
     position: relative;
-    padding: 20px;
+    padding: 20px 30px;
     background-color: #EFFFC2;
     font-style: italic;
     margin-bottom: 2rem;
@@ -379,7 +419,7 @@ main {
 }
 
 #introHeader h1 { 
-    font-size: 3em;
+    font-size: 4.6em;
 }
 
 /* Anchors (a) */
@@ -388,8 +428,9 @@ main {
 }
 
 /* Cards */
-.default-card {
-    max-width: 20rem;
+.default-cards {
+    width: 25% !important;
+    min-width: 20rem !important;
 }
 .default-card-lg {
     max-width: 30rem;
