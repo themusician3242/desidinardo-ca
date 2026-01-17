@@ -64,6 +64,8 @@ section, .header, footer {
 
     color: white !important;
     font-size: 1.05em !important;
+
+    min-width: 200px;
 }
 .btn-style-1:hover { 
     background-image: linear-gradient(to right, rgb(0, 119, 255), rgb(0, 106, 226));
@@ -323,9 +325,6 @@ main {
 #homeMain section:nth-child(2) {
     grid-column-start: 3;
     grid-column-end: 7;
-
-    display: flex;
-    flex-direction: column;
 
     align-items: center;
     justify-content: space-evenly;
