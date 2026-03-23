@@ -11,6 +11,9 @@
     <!-- Bootstrap 5 CSS API -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <!-- P5 Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
 </head>
 <body data-page="index">
     <!-- Header -->
@@ -196,6 +199,7 @@
         <div class="container">
             <h3 class="mt-2 adobe-bengali fw-bold text-center">View More About Me:</h3>
             <div class="d-flex justify-content-center gap-3 align-items-center flex-wrap">
+                <a class="btn btn-style-1 sponsored-btn" href="publications.html">Desi Di Nardo, an Annex Poet Laureate</a>
                 <a class="btn btn-style-1" href="https://canpoetry.library.utoronto.ca/dinardo/index.htm">Canadian Poetry Online</a>
                 <a class="btn btn-style-1" href="http://famouspoetsandpoems.com/poets/desi_di_nardo">Famous Poets & Poems</a>
                 <a class="btn btn-style-1" href="https://www.authorsaloud.com/poetry/dinardo.html">Authors Aloud: The Voices Of Canadian Literature</a>
@@ -309,5 +313,44 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     
+    <script>
+        const sketch = (p) => {
+            let shift = 0;
+
+            p.setup = () => {
+                // Select the button to get its dimensions
+                let btn = document.querySelector('.sponsored-btn');
+                let canvas = p.createCanvas(btn.offsetWidth, btn.offsetHeight);
+
+                // Move the canvas inside the button
+                canvas.parent(btn);
+                p.noStroke();
+            };
+
+            p.draw = () => {
+                    let color1 = p.color(65, 153, 255);
+                    let color2 = p.color(1, 11, 86);
+
+                    for (let x = 0; x <= p.width; x += 2) { // x+=2 is faster for small buttons
+                        let angle = p.map(x, 0, p.width, 0, p.TWO_PI) + shift;
+                        let inter = p.map(p.sin(angle), -1, 1, 0, 1);
+                        let c = p.lerpColor(color1, color2, inter);
+
+                        p.fill(c);
+                        p.rect(x, 0, 2, p.height);
+                    }
+                    shift += 0.05;
+                };
+
+                // Optional: Resize canvas if the window/button changes
+                p.windowResized = () => {
+                    let btn = document.getElementById('p5-button-container');
+                    p.resizeCanvas(btn.offsetWidth, btn.offsetHeight);
+                };
+            };
+
+            // Initialize the sketch
+            new p5(sketch);
+    </script>
 </body>
 </html>
