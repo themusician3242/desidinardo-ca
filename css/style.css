@@ -22,6 +22,7 @@ FONTS USED:
 html, body { 
     height: 100%;
     margin: 0;
+    overflow-x: hidden;
 }
 .page-wrapper { 
     min-height: 100vh;
@@ -70,32 +71,36 @@ section, .header, footer {
 .btn-style-1:hover { 
     background-image: linear-gradient(to right, rgb(0, 119, 255), rgb(0, 106, 226));
 }
-/* Target the canvas p5 creates inside the button */
 .sponsored-btn {
     position: relative;
-    /* This makes it the anchor for the canvas */
     display: inline-flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    /* Important: clips the canvas to the button's rounded corners */
     z-index: 1;
-    /* Create a stacking context */
 
-    /* Ensure your button has a set height or padding */
     padding: 20px 40px;
     text-decoration: none;
 }
 
-.sponsored-btn canvas {
-    position: absolute !important;
+/* Canvases */
+#bioSection canvas {
+    opacity: 5%;
+}
+
+.sponsored-btn canvas, #bioSection canvas {
+    position: absolute;
     /* Move it behind the text */
     top: 0;
     left: 0;
     z-index: -1;
     /* Place it behind everything else inside the button */
-    width: 100% !important;
-    height: 100% !important;
+    width: 100%;
+    height: 100%;
+}
+
+.sponsored-btn canvas { 
+    opacity: 100% !important;
 }
 
 /* Header & Sidebar */
@@ -236,7 +241,7 @@ label {
     transition: background-color linear;
 }
 .header-sidebar li:hover {
-    background-color: rgb(121, 190, 255) !important;
+    background-color: rgb(0, 114, 221) !important;
 }
 .header-sidebar .active {
     background-color: rgb(0, 132, 255) !important;;
