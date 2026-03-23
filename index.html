@@ -390,10 +390,14 @@
                     // If bioSection doesn't exist yet, handle that error
                     if (!bioSection) return;
 
-                    let canvas = p.createCanvas(bioSection.offsetWidth + 75, bioSection.offsetHeight - 100);
+                    let canvas = p.createCanvas(bioSection.offsetWidth, bioSection.offsetHeight);
                     canvas.parent(bioSection);
                     p.noStroke();
                 };
+
+                p.windowResized = () => { 
+                    p.resizeCanvas(bioSection.offsetWidth, bioSection.offsetHeight);
+                }
 
                 p.draw = () => { // Fixed syntax
                     p.clear();
